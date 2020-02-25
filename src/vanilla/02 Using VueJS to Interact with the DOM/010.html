@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>010 How the VueJS Template Syntax and Instance Work Together</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p>{{ sayHello() }}</p>
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                title: 'Hello World'
+            },
+            methods: {
+                sayHello: function () {
+                    return 'Hello!';
+                }
+            }
+        });
+    </script>
+</body>
+</html>

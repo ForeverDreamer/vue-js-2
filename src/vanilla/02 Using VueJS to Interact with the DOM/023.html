@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>023 Using Two-Way-Binding</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="name">
+        <p>{{name}}</p>
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                name: 'Max',
+            }
+        });
+    </script>
+</body>
+
+</html>

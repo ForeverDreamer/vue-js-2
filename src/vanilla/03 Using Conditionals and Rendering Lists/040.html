@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>040 Getting the Current Index</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="(ingredient, i) in ingredients">{{ingredient}}({{i}})</li>
+        </ul>
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                ingredients: ['meat', 'fruit', 'cookies'],
+                persons: [
+                    {name: 'Max', age: 27, color: 'red'},
+                    {name: 'Anna', age: 'unknown', color: 'blue'}
+                ]
+            }
+        });
+    </script>
+</body>
+</html>
