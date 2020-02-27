@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>092 An Introduction to Components</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <my-cmp></my-cmp>
+        <hr>
+        <my-cmp></my-cmp>
+    </div>
+
+    <script>
+        Vue.component('my-cmp', {
+            data: function () {
+                return {
+                    status: 'Critical'
+                }
+            },
+            template: '<p>Server Status: {{status}}</p>'
+        });
+
+        new Vue({
+            el: '#app'
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>093 Storing Data in Components with the Data Method</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <my-cmp></my-cmp>
+        <hr>
+        <my-cmp></my-cmp>
+    </div>
+
+    <script>
+        // let data = {
+        //     status: 'Critical'
+        // };
+
+        Vue.component('my-cmp', {
+            data: function () {
+                // 所有的component实例共享同一份data object
+                // return data
+                // 每个component实例拥有独立的data object
+                return {
+                    status: 'Critical'
+                }
+            },
+            template: '<p>Server Status: {{status}} <button @click="changeStatus">Change</button></p>',
+            methods: {
+                changeStatus: function () {
+                    this.status = 'Normal';
+                }
+            }
+        });
+
+        new Vue({
+            el: '#app'
+        });
+    </script>
+</body>
+</html>
