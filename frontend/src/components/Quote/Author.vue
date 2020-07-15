@@ -1,12 +1,12 @@
 <template>
-    <div class="container">
-
+    <div>
+        <h3>The Author</h3>
     </div>
 </template>
 
 <script>
     export default {
-        name: "App"
+        name: "Author"
     }
 </script>
 
